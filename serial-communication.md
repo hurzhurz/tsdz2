@@ -13,14 +13,14 @@ Content:
 Byte No. | example | description
 -------- | ------- | -----------
 1 | 0x43 | Start-Byte
-2 | 0x00 | Battery level
-3 | 0x01 | Motor status flags
-4 | 0x51 | Pedal torque-sensor "tara" value
-5 | 0x51 | Pedal torque-sensor actual value
-6 | 0x00 | Error code
-7 | 0x07 | Speedsensor (LOW part of 16bit int)
-8 | 0x07 | Speedsensor (HIGH part of 16bit int)
-9 | 0xF4 | [Checksum](#Checksum)
+2 | 0x00 | [Battery level](#battery-level)
+3 | 0x01 | [Motor status flags](#motor-status-flags)
+4 | 0x51 | [Pedal torque-sensor "tara" value](#pedal-torque)
+5 | 0x51 | [Pedal torque-sensor actual value](#pedal-torque)
+6 | 0x00 | [Error code](#error-code)
+7 | 0x07 | [Speedsensor (LOW part of 16bit int)](#speed)
+8 | 0x07 | [Speedsensor (HIGH part of 16bit int)](#speed)
+9 | 0xF4 | [Checksum](#checksum)
 
 ## LCD to motor
 Example message:
@@ -34,12 +34,12 @@ Content:
 Byte No. | example | description
 -------- | ------- | -----------
 1 | 0x59 | Start-Byte
-2 | 0x40 | Motor control flags
+2 | 0x40 | [Motor control flags](#motor-control-flags)
 3 | 0x00 | unused
-4 | 0x1C | Wheel size
+4 | 0x1C | [Wheel size](#wheel-size)
 5 | 0x00 | unknown, probably unused by LCD
-6 | 0x1B | Maximum speed
-7 | 0xD0 | [Checksum](#Checksum)
+6 | 0x1B | [Maximum speed](#maximum-speed)
+7 | 0xD0 | [Checksum](#checksum)
 
 
 ## Details
@@ -82,6 +82,17 @@ To get the applied force, you have to subtract the first byte / "tara" value.
 The exact conversion factor has to be tested.   
 The value increases by about 2.7 for every kg added load on a pedal at a pedal arm length of 17cm length.
 That should be about 3.6 Nm per unit on the axis?
+
+### Battery level
+Calculated based on the setting in the [EEPROM](eeprom.md)
+
+value | voltage (36V) | display
+----- | ------------- | -------
+00 | ≈33V | red and blinking
+01 | ≈34V | 1 red bar
+02-09 |  | green range
+0A | >=38V | full
+Though the motor sends values above 0A, the LCD doesn't show any difference, just green and full.
 
 ### Speed
 The speed is basically a 16bit integer that contains the time between two trigger events of the speed sensor = one rotation.   

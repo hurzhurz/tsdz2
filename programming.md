@@ -4,7 +4,7 @@
 * See [pinout](pinout.md)
 * As a programmer, you can use a ST-Link V2 (or a clone)
 
-* Connect the programmer to speed sensor plug:
+* Connect the programmer to speed sensor plug:   
 ![ST-Link Connection](/images/stlink-connection.jpg)
  * SWIM to black
  * VCC/5V to brown

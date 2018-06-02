@@ -66,10 +66,11 @@ Bit | description
 
 ### Wheel size
 Wheel size in inch, e.g. 0x1C in decimal are 28inch   
-TODO: document limits accepted by firmware
+Controller probably only uses values between 6 and 29 inch.
+Firmware default (without LCD) is 0x1a / 26 inch.
 ### Maximum speed
 Speed in kph, e.g. 0x1B in decimal is 27kph   
-TODO: document limits accepted by firmware
+If a value below 0x0e (14kph) is sent to the controller, it uses the default value 0x19 (25kph) instead.
 ### Pedal torque
 #### first byte / "tara" value:
 The torque sensor is read when motor is powered on.  
@@ -105,6 +106,8 @@ Time per ration: 393 units * 2.04 ms = 801.72 ms
 Rotations per second: 1000 ms / 801.72 ms = 1.247 rotations/second
 Speed: 1.247 rotations/second * 2.24 m per rotation = 2.79 m/s * 3.6 = 10kph
 ```
+When standing still, the motor sends the maximum value "07 07" (0x0707 / 1799), so like it would be ≈3.6 seconds.   
+The LCD already ignores values above 1750 / 0x6d6.
 ### Error code
 code | description
 ---- | -----------

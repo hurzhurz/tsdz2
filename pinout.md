@@ -2,7 +2,7 @@
 ![TSDZ2 plugs](/images/tsdz2-plug.jpg)
 
 ## LCD connector
-* Type (at motor): female
+* Type (at motor): female (right in picture)
 
 color | type | pullup resistor | voltage level | description
 ----- | ---- | --------------- | ------------- | -----------
@@ -13,8 +13,14 @@ orange | INPUT | ≈5.5k | 5V | serial RX
 purple | INPUT | ≈9.5k | 5V | brake switch input / motor cutoff / low active
 white | INPUT |  | ≈V_BATT | controller enable / high active
 
+* Throttle version:
+The throttle version of the motor has a 8-pin connector instead of a 6-pin connector.   
+The additional pins are probably:
+  * 5V supply voltage for the hall sensor (SS49E?)
+  * Analog INPUT
+
 ## Speedsensor connector
- * Type (at motor): male
+ * Type (at motor): male (left in picture)
 
 color | type | pullup resistor | voltage level | description
 ----- | ---- | --------------- | ------------- | -----------

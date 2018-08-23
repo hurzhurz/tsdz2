@@ -6,10 +6,10 @@
 
 * Connect the programmer to speed sensor plug:   
 ![ST-Link Connection](/images/stlink-connection.jpg)
- * SWIM to black
- * VCC/5V to brown
- * GND to orange
- * optinal: SWIM_RST to purple
+  * SWIM to black
+  * VCC/5V to brown
+  * GND to orange
+  * optional: SWIM_RST to purple
 
 * Software
  * Get STVP (ST Visual Programmer STM32) from here:   
@@ -21,6 +21,6 @@
    * DATA MEMORY (=EEPROM)
    * OPTION BYTE
  * Before programming/writing anything else, I would recommend to:
-  * Read all three multiple times
-  * Compare if all reads are identical
-  * Save at least one copy at a save place in case you have to restore anything
+   * Read all three multiple times
+   * Compare if all reads are identical
+   * Save at least one copy at a save place in case you have to restore anything

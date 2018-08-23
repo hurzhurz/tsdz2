@@ -63,6 +63,7 @@ Bit | description
 \#4 | assist off
 \#5 | 6kph mode
 \#6 | assist level 1
+\#7 | hidden/unused assist level below level 1
 
 ### Wheel size
 Wheel size in inch, e.g. 0x1C in decimal are 28inch   

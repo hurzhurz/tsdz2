@@ -10,6 +10,7 @@
   * VCC/5V to brown
   * GND to orange
   * optional: SWIM_RST to purple
+  * <ins>use a short cable, preferably not longer than about 20cm</ins>
 
 * Software
  * Get STVP (ST Visual Programmer STM32) from here:   

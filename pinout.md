@@ -30,3 +30,5 @@ green | OUTPUT |  | ≈6V | V_HEADLIGHT
 orange | - |  |  | GROUND
 purple | INPUT | ≈10.5k | 5V | RST (programming interface)
 white | INPUT | ≈8k | 5V | speed sensor / low active
+
+Note that the Y-splitter that comes with some motors does not have the black/purple pins connected

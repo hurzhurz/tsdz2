@@ -16,7 +16,8 @@
  * Get STVP (ST Visual Programmer STM32) from here:   
  http://www.st.com/en/development-tools/stvp-stm32.html
  * Setup Programmer and device (STM8S105x4) like here:
- ![STVP device selection](/images/stvp_device.PNG)
+ ![STVP device selection](/images/stvp_device.PNG)  
+ **Note:** For flashing the [Flexible OpenSource firmware](https://github.com/OpenSource-EBike-firmware/TSDZ2_wiki/wiki), you need to select STM8S105x6 as device because of the firmware size ([incorrect type, but works](https://endless-sphere.com/forums/viewtopic.php?f=30&t=93818&start=50#p1374884)) 
  * You can then be able to read/write:
    * PROGRAM MEMORY (=Flash)
    * DATA MEMORY (=EEPROM)
